@@ -1,4 +1,4 @@
-from gnupg import GPG
+import gnupg
 import json
 import os
 import subprocess
@@ -7,7 +7,7 @@ import tempfile
 def firstrun():
     print("Ok we need to set up some things real quick\n")
     gnupgdir = input("Where's your gnupg config directory?: ")
-    identity = input("What's your private key fingerprint?: ")
+    identity = input("What's your GPG identity?: ")
     if not os.path.isdir(os.environ['HOME'] + "/.secrets"):
         os.mkdir(os.environ['HOME'] + "/.secrets")
     with open(os.environ['HOME'] + "/.secrets/config", "w") as myfile:
@@ -20,10 +20,11 @@ class Notes(object):
         self.filepath = os.environ['HOME'] + "/.secrets"
         with open(self.filepath + "/config") as myfile:
             self.config = json.load(myfile)
-        self.gpg = GPG(homedir = self.config['gpghome'])
+        self.gpg = gnupg.GPG(gnupghome = self.config['gpghome'])
         if (os.path.isfile(self.filepath + "/notes")):
             with open(self.filepath + "/notes") as myfile:
-                self.notes = json.load(myfile)
+                rawnotes = myfile.read()
+            self.notes = json.loads(str(self.gpg.decrypt(rawnotes)))
         else:
             self.notes = {}
 
@@ -47,9 +48,7 @@ class Notes(object):
 
     def close(self):
         jsonnotes = json.dumps(self.notes)
-        print(jsonnotes)
         encrypted = self.gpg.encrypt(jsonnotes, self.config['identity'])
-        print(str(encrypted))
         with open(self.filepath + "/notes", "w") as myfile:
             myfile.write(str(encrypted))
 
