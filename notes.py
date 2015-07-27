@@ -46,7 +46,10 @@ class Notes(object):
             self.notes[note] = myfile.read()
         os.remove(temp[1])
 
-#     def close(self):
+    def close(self):
+        with open(self.filepath + "/notes", "w") as myfile:
+            json.dump(self.notes, myfile)
+
 
 #     def listen(self):
 
