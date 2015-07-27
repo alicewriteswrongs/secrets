@@ -1,5 +1,4 @@
 from notes import Notes, firstrun
-import notes
 import os
 import sys
 
@@ -24,10 +23,12 @@ else:
                 notes.newnote(sys.argv[2])
             else:
                 print("Error: give it a title!")
+        elif (sys.argv[1] == "echo"):
+            if len(sys.argv) > 2:
+                notes.echonote(sys.argv[2])
         else:
             if (sys.argv[1] in notes.notes.keys()):
                 notes.editnote(sys.argv[1])
-
     notes.close()
 
 

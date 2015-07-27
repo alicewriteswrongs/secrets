@@ -1,5 +1,4 @@
 from gnupg import GPG
-import sys
 import json
 import os
 import subprocess
@@ -47,10 +46,12 @@ class Notes(object):
         os.remove(temp[1])
 
     def close(self):
+        jsonnotes = json.dumps(self.notes)
+        print(jsonnotes)
+        encrypted = self.gpg.encrypt(jsonnotes, self.config['identity'])
+        print(str(encrypted))
         with open(self.filepath + "/notes", "w") as myfile:
-            json.dump(self.notes, myfile)
+            myfile.write(str(encrypted))
 
-
-#     def listen(self):
-
-#     def firstrun(self):
+    def echonote(self, note):
+        print(self.notes[note])
