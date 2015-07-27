@@ -20,16 +20,22 @@ add the script to your `$PATH`.
 
 ##Keeping super secret notes!
 
-To use it do:
+To start off you should do 
 
 ```
-secrets --list
+secrets init
+```
+
+to configure the program. Then to list yournotes:
+
+```
+secrets list
 ```
 
 to see your secrets (titles only).
 
 ```
-secrets --new foo
+secrets new foo
 ```
 
 Secrets will open the notes in your `$EDITOR`. If you haven't set that
@@ -38,13 +44,13 @@ before it's probably Vim or nano?
 To add a new secret (foo)
 
 ```
-secrets --delete foo
+secrets delete foo
 ```
 
 to get rid of useless secrets (like foo)
 
 ```
-secrets --echo foo
+secrets echo foo
 ```
 
 to put the contents of foo on `stdout`, and finally
