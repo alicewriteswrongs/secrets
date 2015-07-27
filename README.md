@@ -46,4 +46,8 @@ I'm not a cryptographer or security expert. This program certainly has
 some security flaws. Don't use it if you adversary is more technically
 sophisticated than 'your roommate looking at recent documents'.
 
+In particular I made several assumptions which are not secure - the
+contents of the notes live in files in `/tmp` in plaintext while you're
+editing them. Oops!
+
 Happy secreting!
