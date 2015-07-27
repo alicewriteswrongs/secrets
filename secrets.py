@@ -26,6 +26,9 @@ else:
         elif (sys.argv[1] == "echo"):
             if len(sys.argv) > 2:
                 notes.echonote(sys.argv[2])
+        elif (sys.argv[1] == "delete"):
+            if len(sys.argv) > 2:
+                notes.deletenote(sys.argv[2])
         else:
             if (sys.argv[1] in notes.notes.keys()):
                 notes.editnote(sys.argv[1])

@@ -32,19 +32,29 @@ class Notes(object):
         for key in self.notes.keys():
             print(key)
 
+    def deletenote(self, note):
+        if note in self.notes:
+            del self.notes[note]
+            print("removed " + note)
+        else:
+            print("didn't find that one!")
+
     def newnote(self, note):
         self.notes[note] = ''
         self.editnote(note)
 
     def editnote(self, note):
-        temp = tempfile.mkstemp()
-        with open(temp[1], "w") as myfile:
-            myfile.write(self.notes[note])
-        p = subprocess.Popen((os.environ['EDITOR'], temp[1]))
-        p.wait()
-        with open(temp[1]) as myfile:
-            self.notes[note] = myfile.read()
-        os.remove(temp[1])
+        if note in self.notes:
+            temp = tempfile.mkstemp()
+            with open(temp[1], "w") as myfile:
+                myfile.write(self.notes[note])
+            p = subprocess.Popen((os.environ['EDITOR'], temp[1]))
+            p.wait()
+            with open(temp[1]) as myfile:
+                self.notes[note] = myfile.read()
+            os.remove(temp[1])
+        else:
+            self.newnote(note)
 
     def close(self):
         jsonnotes = json.dumps(self.notes)
