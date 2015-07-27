@@ -6,13 +6,24 @@ gpg](https://github.com/aliceriot/gpg_workshop/blob/master/gpg.markdown)
 if you haven't got one) and you need to have your gpg configured to use
 gpg-agent (allows the key to be unlocked and stay open for a bit).
 
+##Installing
+
 Cool! There's only one dependency right now, so just do
 
 ```
 pip install -r requirements.txt
 ```
 
-Everything else is from the Python 3 standard library. 
+Everything else is from the Python 3 standard library. If you want to make
+secrets a  little bit easier to use I'd recommend doing:
+
+```
+sudo ln -s /path/to/secrets.py /usr/bin/secrets
+```
+
+or otherwise add the script to your `$PATH`. 
+
+##Keeping super secret notes!
 
 To use it do:
 
