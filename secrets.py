@@ -24,5 +24,10 @@ else:
                 notes.newnote(sys.argv[2])
             else:
                 print("Error: give it a title!")
+        else:
+            if (sys.argv[1] in notes.notes.keys()):
+                notes.editnote(sys.argv[1])
+
+    notes.close()
 
 
