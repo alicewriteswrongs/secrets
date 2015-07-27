@@ -15,13 +15,8 @@ pip install -r requirements.txt
 ```
 
 Everything else is from the Python 3 standard library. If you want to make
-secrets a  little bit easier to use I'd recommend doing:
-
-```
-sudo ln -s /path/to/secrets.py /usr/bin/secrets
-```
-
-or otherwise add the script to your `$PATH`. 
+secrets a  little bit easier to use I'd recommend doing something to
+add the script to your `$PATH`.
 
 ##Keeping super secret notes!
 
@@ -37,7 +32,10 @@ to see your secrets (titles only).
 secrets --new foo
 ```
 
-to add a new secret (foo)
+Secrets will open the notes in your `$EDITOR`. If you haven't set that
+before it's probably Vim or nano?
+
+To add a new secret (foo)
 
 ```
 secrets --delete foo
