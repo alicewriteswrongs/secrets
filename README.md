@@ -6,7 +6,13 @@ gpg](https://github.com/aliceriot/gpg_workshop/blob/master/gpg.markdown)
 if you haven't got one) and you need to have your gpg configured to use
 gpg-agent (allows the key to be unlocked and stay open for a bit).
 
-Cool!
+Cool! There's only one dependency right now, so just do
+
+```
+pip install -r requirements.txt
+```
+
+Everything else is from the Python 3 standard library. 
 
 To use it do:
 
@@ -44,10 +50,11 @@ to edit foo. Nice!
 
 I'm not a cryptographer or security expert. This program certainly has
 some security flaws. Don't use it if you adversary is more technically
-sophisticated than 'your roommate looking at recent documents'.
+sophisticated than 'your roommate snooping through your recent documents'.
 
-In particular I made several assumptions which are not secure - the
-contents of the notes live in files in `/tmp` in plaintext while you're
-editing them. Oops!
+In particular I made several decisions which are not secure - the contents
+of the notes live in files in `/tmp` in plaintext while you're editing
+them. The whole notes database is also in memory when the program is
+running. Oops!
 
 Happy secreting!
