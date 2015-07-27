@@ -26,7 +26,7 @@ To start off you should do
 secrets init
 ```
 
-to configure the program. Then to list yournotes:
+to configure the program. Then to list your notes:
 
 ```
 secrets list
