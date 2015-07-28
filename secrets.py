@@ -16,9 +16,12 @@ secrets ="""  _________                            __
 if not os.path.isfile(os.environ['HOME'] + "/.secrets/config"):
     if len(sys.argv) > 1:
         if (sys.argv[1] == "init"):
+            print("\twelcome to")
+            print(secrets)
             firstrun()
     else:
-        print("Secrets is not initialized. Pass 'init' to set up")
+        print(secrets)
+        print("\t\tis not initialized. Pass 'init' to set up")
 # the rest of the options
 else:
     notes = Notes()
@@ -45,6 +48,10 @@ else:
         else:
             if (sys.argv[1] in notes.notes.keys()):
                 notes.editnote(sys.argv[1])
+    else:
+        print(secrets)
+        print("\ttry secrets.py list")
+        print("\tor secrets.py foo")
     notes.close()
 
 
