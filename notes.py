@@ -30,7 +30,7 @@ class Notes(object):
 
     def listnotes(self):
         for key in self.notes.keys():
-            print(key)
+            print('\t' + key)
 
     def deletenote(self, note):
         if note in self.notes:
