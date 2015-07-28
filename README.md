@@ -1,5 +1,15 @@
 #Secrets
 
+```
+  _________                            __          
+ /   _____/ ____   ___________   _____/  |_  ______
+ \_____  \_/ __ \_/ ___\_  __ \_/ __ \   __\/  ___/
+ /        \  ___/\  \___|  | \/\  ___/|  |  \___ \ 
+/_______  /\___  >\___  >__|    \___  >__| /____  >
+        \/     \/     \/            \/          \/ 
+```
+
+
 Secrets is a little Python wrapper around gpg to automate encrypted
 notekeeping. You need to already have a gpg key (I wrote a [guide to
 gpg](https://github.com/aliceriot/gpg_workshop/blob/master/gpg.markdown)
