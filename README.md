@@ -30,6 +30,7 @@ and then add `secrets.py` to your path somehow (you'll also need to add
 `#!/usr/bin/python` to the top). If you're a Debian user you can do
 
 ```
+sudo apt-get install dh-virtualenv
 sudo dpkg-buildpackage -us -uc
 ```
 
