@@ -1,2 +1,6 @@
 build
 secrets.egg-info/
+debian/files
+debian/secrets.debhelper.log
+debian/secrets.substvars
+debian/secrets/
