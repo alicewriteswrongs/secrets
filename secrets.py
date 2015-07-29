@@ -51,8 +51,8 @@ def main():
                     notes.editnote(sys.argv[1])
         else:
             print(secrets)
-            print("\ttry secrets.py list")
-            print("\tor secrets.py foo")
+            print("\ttry secrets list")
+            print("\tor secrets foo")
         notes.close()
 
 if __name__ == '__main__':

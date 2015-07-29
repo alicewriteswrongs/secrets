@@ -98,3 +98,9 @@ them. The whole notes database is also in memory when the program is
 running. Oops!
 
 Happy secreting!
+
+
+###TODO
+
+* fix note overwrite bug (overwrites `foo` if you do `secrets new foo`)
+* add shortcut (`secrets blah` => `secrets new blah`)
