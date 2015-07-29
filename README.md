@@ -18,15 +18,24 @@ gpg-agent (allows the key to be unlocked and stay open for a bit).
 
 ##Installing
 
-Cool! There's only one dependency right now, so just do
+There's only one dependency right now, the
+[python-gnupg](https://pythonhosted.org/python-gnupg/) module. If you're
+not on Debian or Ubuntu do this:
 
 ```
 pip install -r requirements.txt
 ```
 
-Everything else is from the Python 3 standard library. If you want to make
-secrets a  little bit easier to use I'd recommend doing something to
-add the script to your `$PATH`.
+and then add `secrets.py` to your path somehow (you'll also need to add
+`#!/usr/bin/python` to the top). If you're a Debian user you can do
+
+```
+sudo pip install make-deb
+make-deb
+sudo dpkg-buildpackage -us -uc
+```
+
+and you'll get a nice tasty Debian package you can install! Great!
 
 ##Keeping super secret notes!
 
