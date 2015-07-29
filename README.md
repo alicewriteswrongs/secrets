@@ -59,6 +59,8 @@ secrets list
 
 to see your secrets (titles only).
 
+To start a new note called foo:
+
 ```
 secrets new foo
 ```
@@ -66,25 +68,26 @@ secrets new foo
 Secrets will open the notes in your `$EDITOR`. If you haven't set that
 before it's probably Vim or nano?
 
-To add a new secret (foo)
+
+To get rid of useless secrets (like foo) do:
 
 ```
 secrets delete foo
 ```
 
-to get rid of useless secrets (like foo)
+To put the contents of foo on `stdout` try:
 
 ```
 secrets echo foo
 ```
 
-to put the contents of foo on `stdout`, and finally
+and finally, do:
 
 ```
 secrets foo
 ```
 
-to edit foo. Nice!
+to edit an existing note foo. Nice!
 
 ##Warnings and disclaimers and blah
 
