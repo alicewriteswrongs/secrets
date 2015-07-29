@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+export DH_VIRTUALENV_INSTALL_ROOT=/usr/share/secrets
+
+%:
+	dh $@ --with python-virtualenv
+
+override_dh_auto_install:
+	python setup.py install --root=debian/secrets --install-layout=deb --install-lib=/usr/share/secrets --install-scripts=/usr/share/secrets
+override_dh_auto_build:
