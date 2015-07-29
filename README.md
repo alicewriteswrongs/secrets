@@ -33,7 +33,15 @@ and then add `secrets.py` to your path somehow (you'll also need to add
 sudo dpkg-buildpackage -us -uc
 ```
 
-and you'll get a nice tasty Debian package you can install! Great!
+in the directory into which you cloned this repo, and you'll get a nice
+tasty Debian package you can install! Great! As a reminder you can then
+do:
+
+```
+sudo dpkg --install secrets_0.1_amd64.deb
+```
+
+and that's it!
 
 ##Keeping super secret notes!
 
