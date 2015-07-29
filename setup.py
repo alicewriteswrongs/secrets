@@ -10,5 +10,8 @@ setup(
         maintainer = 'Alice Pote',
         maintainer_email = 'alice.writes.wrongs@gmail.com',
         description = 'store your secrets using GPG!',
+        entry_points =  {
+            'console_scripts': [ 'secrets=secrets:main' ]
+            }
 )
 
