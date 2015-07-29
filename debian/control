@@ -1,0 +1,12 @@
+Source: secrets
+Section: python
+Priority: extra
+Maintainer: Matt Maintainer <matt@example.com>
+Build-Depends: debhelper (>= 9), python3, dh-virtualenv (>= 0.8)
+Standards-Version: 3.9.5
+
+Package: secrets
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python3.4 | python3.3${misc:Pre-Depends}
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: keep secrets!
