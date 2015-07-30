@@ -37,7 +37,10 @@ def main():
                 notes.listnotes()
             elif (sys.argv[1] == "new"):
                 if len(sys.argv) > 2:
-                    notes.newnote(sys.argv[2])
+                    if sys.argv[2] in notes.notes:
+                        notes.editnote(sys.argv[2])
+                    else:
+                        notes.newnote(sys.argv[2])
                 else:
                     print("Error: give it a title!")
             elif (sys.argv[1] == "echo"):
@@ -49,6 +52,8 @@ def main():
             else:
                 if (sys.argv[1] in notes.notes.keys()):
                     notes.editnote(sys.argv[1])
+                else:
+                    notes.newnote(sys.argv[1])
         else:
             print(secrets)
             print("\ttry secrets list")

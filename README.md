@@ -39,7 +39,7 @@ tasty Debian package you can install! Great! As a reminder you can then
 do:
 
 ```
-sudo dpkg --install secrets_0.1_amd64.deb
+sudo dpkg --install ../secrets_0.1_amd64.deb
 ```
 
 and that's it!
@@ -105,6 +105,3 @@ Happy secreting!
 
 
 ###TODO
-
-* fix note overwrite bug (overwrites `foo` if you do `secrets new foo`)
-* add shortcut (`secrets blah` => `secrets new blah`)
