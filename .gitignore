@@ -6,3 +6,4 @@ debian/secrets.substvars
 debian/secrets/
 *.pyc
 dist
+secret_notes.egg-info/
