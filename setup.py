@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-        name = 'secrets',
+        name = 'secret-notes',
         version = '0.1',
         py_modules = ['secrets', 'notes'],
         install_requires = ['python-gnupg'],
