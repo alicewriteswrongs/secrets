@@ -18,16 +18,14 @@ gpg-agent (allows the key to be unlocked and stay open for a bit).
 
 ##Installing
 
-There's only one dependency right now, the
-[python-gnupg](https://pythonhosted.org/python-gnupg/) module. If you're
-not on Debian or Ubuntu do this:
+Just do this:
 
 ```
-pip install -r requirements.txt
+pip install secret-notes
 ```
 
-and then add `secrets.py` to your path somehow (you'll also need to add
-`#!/usr/bin/python` to the top). If you're a Debian user you can do
+and that should be it! If you're a Debian or Ubuntu user and you'd rather
+use your system's package manager you can, after cloning the repo, do:
 
 ```
 sudo apt-get install dh-virtualenv
