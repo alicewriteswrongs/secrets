@@ -5,3 +5,4 @@ debian/secrets.debhelper.log
 debian/secrets.substvars
 debian/secrets/
 *.pyc
+dist
