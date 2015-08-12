@@ -4,6 +4,7 @@ debian/files
 debian/secrets.debhelper.log
 debian/secrets.substvars
 debian/secrets/
+env
 *.pyc
 dist
 secret_notes.egg-info/
