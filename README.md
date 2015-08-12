@@ -42,6 +42,15 @@ sudo dpkg --install ../secrets_0.1_amd64.deb
 
 and that's it!
 
+##Verification
+
+If you use [keybase](https://keybase.io) you can verify the signature on
+the repo with:
+
+```
+keybase dir verify
+```
+
 ##Keeping super secret notes!
 
 To start off you should do 
