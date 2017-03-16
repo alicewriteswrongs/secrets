@@ -1,4 +1,4 @@
-#Secrets
+# Secrets
 
 ```
   _________                            __          
@@ -16,7 +16,7 @@ gpg](https://github.com/aliceriot/gpg_workshop/blob/master/gpg.markdown)
 if you haven't got one) and you need to have your gpg configured to use
 gpg-agent (allows the key to be unlocked and stay open for a bit).
 
-##Installing
+## Installing
 
 Just do this:
 
@@ -42,7 +42,7 @@ sudo dpkg --install ../secrets_0.1_amd64.deb
 
 and that's it!
 
-##Verification
+## Verification
 
 If you use [keybase](https://keybase.io) you can verify the signature on
 the repo with:
@@ -51,7 +51,7 @@ the repo with:
 keybase dir verify
 ```
 
-##Keeping super secret notes!
+## Keeping super secret notes!
 
 To start off you should do 
 
@@ -97,7 +97,7 @@ secrets foo
 
 to edit an existing note foo. Nice!
 
-##Warnings and disclaimers and blah
+## Warnings and disclaimers and blah
 
 I'm not a cryptographer or security expert. This program certainly has
 some security flaws. Don't use it if you adversary is more technically
@@ -111,4 +111,4 @@ running. Oops!
 Happy secreting!
 
 
-###TODO
+### TODO
