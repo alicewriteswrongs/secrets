@@ -1,1 +1,1 @@
-python-gnupg==0.3.7
+python-gnupg==0.4.4
